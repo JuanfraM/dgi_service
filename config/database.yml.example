@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  host: localhost
+  database: dgi_api
+  username:
+  password:
+
+test:
+  adapter: postgresql
+  host: localhost
+  database: dgi_api_test
+  username:
+  password:
