@@ -1,5 +1,5 @@
 module Api
-  class DgiController < ApplicationController
+  class ApiController < ApplicationController
 
     respond_to :json
     layout false

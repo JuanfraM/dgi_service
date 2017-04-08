@@ -1,2 +1,2 @@
 # external_services
-Simulation of DGI, used for academic purpose
+Simulation of Dgi, Bps, etc, used for academic purpose
