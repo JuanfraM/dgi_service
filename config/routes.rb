@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     namespace :dgi , defaults: { format: :json }  do
       resources :users do
         collection do
-          get 'Select_for_use', to: :Select_for_use
+          get 'user-data', to: :user_data
         end
       end
     end

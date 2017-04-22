@@ -1,6 +1,7 @@
 module Api
   module Dgi
     class UsersController < Api::ApiController
+      before_action :user, only: [:user_data]
 
       def index
         @users = User.all
@@ -12,11 +13,7 @@ module Api
         @user = User.find(params[:id])
       end
 
-      def Select_for_use
-        aux = params[:user].tr('[]','')
-        aux = aux.tr(' ','')
-        @params_required = aux.split(',').collect! {|n| n}
-        @user = User.find_by(ci: params[:ci])
+      def user_data
       end
 
       private
@@ -26,6 +23,10 @@ module Api
           :ci, :nombre, :apellido, :nombre_completo,
           :sexo, :nacionalidad, :tel
         )
+      end
+
+      def user
+        @user = User.find_by(ci: params[:ci])
       end
     end
   end
