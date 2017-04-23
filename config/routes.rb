@@ -11,5 +11,17 @@ Rails.application.routes.draw do
         end
       end
     end
+    namespace :bps , defaults: { format: :json }  do
+      resources :bps_users do
+        collection do
+          get 'user-info', to: :user_info
+        end
+      end
+      resources :bps_aportes do
+        collection do
+          get 'user-aporte', to: :user_aporte
+        end
+      end
+    end
   end
 end
