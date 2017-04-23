@@ -26,7 +26,7 @@ module Api
       end
 
       def user
-        @user = User.find_by(ci: params[:ci])
+        @user = User.find_by(ci: params[:NumeroDocumento])
       end
     end
   end
