@@ -1,13 +1,13 @@
 development:
   adapter: postgresql
   host: localhost
-  database: dgi_api
+  database: services_api
   username:
   password:
 
 test:
   adapter: postgresql
   host: localhost
-  database: dgi_api_test
+  database: services_api_test
   username:
   password:

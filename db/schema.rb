@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327231517) do
+ActiveRecord::Schema.define(version: 20170422222517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bps_aportes", force: :cascade do |t|
+    t.integer  "sueldo"
+    t.integer  "jubilacion"
+    t.integer  "fonasa"
+    t.integer  "bps_user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["bps_user_id"], name: "index_bps_aportes_on_bps_user_id", using: :btree
+  end
+
+  create_table "bps_users", force: :cascade do |t|
+    t.integer  "ci"
+    t.string   "nombre"
+    t.string   "apellido"
+    t.string   "sexo"
+    t.string   "nacionalidad"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["ci"], name: "index_bps_users_on_ci", unique: true, using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.integer  "ci"
