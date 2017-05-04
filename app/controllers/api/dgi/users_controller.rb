@@ -8,7 +8,6 @@ module Api
       end
 
       def show
-        # {"user"=>"[nombre, apellido]"
         @params_required = JSON.parse(params[:user])
         @user = User.find(params[:id])
       end
@@ -20,13 +19,13 @@ module Api
 
       def user_params
         params.require(:user).permit(
-          :ci, :nombre, :apellido, :nombre_completo,
-          :sexo, :nacionalidad, :tel
+          :numero_documento, :tipo_documento, :nombre, :apellido, :nombre_completo,
+          :sexo, :nacionalidad, :tel, :email
         )
       end
 
       def user
-        @user = User.find_by(ci: params[:NumeroDocumento])
+        @user = User.find_by(numero_documento: params[:NumeroDocumento])
       end
     end
   end

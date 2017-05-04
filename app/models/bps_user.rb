@@ -1,7 +1,7 @@
 class BpsUser < ApplicationRecord
   has_many :bps_aportes
-  validates :ci, uniqueness: true
-  validates :ci, :nombre, :apellido, presence: true
+  validates :numero_documento, uniqueness: true
+  validates :numero_documento, :tipo_documento, :nombre, :apellido, presence: true
 
   def aportes
     bps_aportes

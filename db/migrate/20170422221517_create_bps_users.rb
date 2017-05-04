@@ -1,15 +1,17 @@
 class CreateBpsUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :bps_users do |t|
-      t.integer :ci
+      t.integer :numero_documento
+      t.string :tipo_documento
       t.string :nombre
       t.string :apellido
       t.string :sexo
+      t.string :email
       t.string :nacionalidad
 
       t.timestamps null: false
     end
 
-    add_index  :bps_users, :ci, :unique => true
+    add_index  :bps_users, :numero_documento, :unique => true
   end
 end
