@@ -26,28 +26,32 @@ ActiveRecord::Schema.define(version: 20170422222517) do
   end
 
   create_table "bps_users", force: :cascade do |t|
-    t.integer  "ci"
+    t.integer  "numero_documento"
+    t.string   "tipo_documento"
     t.string   "nombre"
     t.string   "apellido"
     t.string   "sexo"
+    t.string   "email"
     t.string   "nacionalidad"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["ci"], name: "index_bps_users_on_ci", unique: true, using: :btree
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["numero_documento"], name: "index_bps_users_on_numero_documento", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer  "ci"
+    t.integer  "numero_documento"
+    t.string   "tipo_documento"
     t.string   "nombre"
     t.string   "apellido"
     t.string   "nombre_completo"
     t.string   "sexo"
+    t.string   "email"
     t.string   "nacionalidad"
     t.string   "tel"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.index ["apellido"], name: "index_users_on_apellido", using: :btree
-    t.index ["ci"], name: "index_users_on_ci", unique: true, using: :btree
+    t.index ["numero_documento"], name: "index_users_on_numero_documento", unique: true, using: :btree
   end
 
 end

@@ -4,20 +4,19 @@ module Api
       before_action :user, only: :user_info
 
       def user_info
-        @user.update!(nombre: "hola")
       end
 
       private
 
       def bps_user_params
         params.require(:bps_user).permit(
-          :ci, :nombre, :apellido, :sexo,
-          :nacionalidad
+          :numero_documento, :tipo_documento, :nombre, :apellido, :sexo,
+          :nacionalidad, :email
         )
       end
 
       def user
-        @user = BpsUser.find_by(ci: params[:NumeroDocumento])
+        @user = BpsUser.find_by(numero_documento: params[:NumeroDocumento])
       end
     end
   end

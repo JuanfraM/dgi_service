@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
-  validates :ci, uniqueness: true
-  validates :ci, :nombre, :apellido, presence: true
+  validates :numero_documento, uniqueness: true
+  validates :numero_documento, :tipo_documento, :nombre, :apellido, presence: true
 
   protected
 
