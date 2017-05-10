@@ -16,7 +16,7 @@ module Api
       end
 
       def user
-        @user = BpsUser.find_by(numero_documento: params[:NumeroDocumento])
+        @user = BpsUser.find_by(numero_documento: params[:numero_documento])
       end
     end
   end
