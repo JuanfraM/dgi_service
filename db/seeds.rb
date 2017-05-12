@@ -12,7 +12,9 @@ user1 = User.find_or_create_by(
             sexo: "M",
             email: "nachogileg@gmail",
             nacionalidad: "Uruguaya",
-            tel: "099366768")
+            tel: "099366768",
+            direccion: "Achiras 1436",
+            residente: "Si")
 
 user2 = User.find_or_create_by(
             numero_documento: 42576388,
@@ -23,7 +25,9 @@ user2 = User.find_or_create_by(
             sexo: "M",
             email: "juanframagrini@gmail.com",
             nacionalidad: "Uruguaya",
-            tel: "098910796")
+            tel: "098910796",
+            direccion: "Rio Negro 1515",
+            residente: "Si")
 
 user3 = User.find_or_create_by(
             numero_documento: 46286492,
@@ -34,7 +38,9 @@ user3 = User.find_or_create_by(
             sexo: "M",
             email: "juanlacu@gmail.com",
             nacionalidad: "Uruguaya",
-            tel: "098649326")
+            tel: "098649326",
+            direccion: "Los Zorros M7 S1",
+            residente: "Si")
 
 user4 = User.find_or_create_by(
             numero_documento: 23456789,
@@ -45,7 +51,9 @@ user4 = User.find_or_create_by(
             sexo: "M",
             email: "juanlacu@gmail.com",
             nacionalidad: "Paraguaya",
-            tel: "098670796")
+            tel: "098670796",
+            direccion: "Asuncion",
+            residente: "No")
 
 userBps1 = BpsUser.find_or_create_by(
             numero_documento: 46864462,
@@ -54,7 +62,9 @@ userBps1 = BpsUser.find_or_create_by(
             apellido: "Gil",
             sexo: "M",
             email: "nachogileg@gmail",
-            nacionalidad: "Uruguaya")
+            nacionalidad: "Uruguaya",
+            ano_de_alta: "2013",
+            afap: "Si")
 
 userBps2 = BpsUser.find_or_create_by(
             numero_documento: 42576388,
@@ -63,7 +73,9 @@ userBps2 = BpsUser.find_or_create_by(
             apellido: "Magrini",
             sexo: "M",
             email: "juanframagrini@gmail.com",
-            nacionalidad: "Uruguaya")
+            nacionalidad: "Uruguaya",
+            ano_de_alta: "2014",
+            afap: "No")
 
 userBps3 = BpsUser.find_or_create_by(
             numero_documento: 46286492,
@@ -72,7 +84,9 @@ userBps3 = BpsUser.find_or_create_by(
             apellido: "La Cruz",
             sexo: "M",
             email: "juanlacu@gmail.com",
-            nacionalidad: "Uruguaya")
+            nacionalidad: "Uruguaya",
+            ano_de_alta: "2014",
+            afap: "Si")
 
 userBps1.bps_aportes.find_or_create_by(sueldo: 30000, jubilacion: 2500, fonasa: 1200)
 userBps2.bps_aportes.find_or_create_by(sueldo: 42000, jubilacion: 3500, fonasa: 3200)
