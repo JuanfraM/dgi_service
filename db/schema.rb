@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20170422222517) do
     t.string   "sexo"
     t.string   "email"
     t.string   "nacionalidad"
+    t.string   "ano_de_alta"
+    t.string   "afap"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.index ["numero_documento"], name: "index_bps_users_on_numero_documento", unique: true, using: :btree
@@ -48,6 +50,8 @@ ActiveRecord::Schema.define(version: 20170422222517) do
     t.string   "email"
     t.string   "nacionalidad"
     t.string   "tel"
+    t.string   "direccion"
+    t.string   "residente"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.index ["apellido"], name: "index_users_on_apellido", using: :btree

@@ -8,6 +8,8 @@ class CreateBpsUsers < ActiveRecord::Migration[5.0]
       t.string :sexo
       t.string :email
       t.string :nacionalidad
+      t.string :ano_de_alta
+      t.string :afap
 
       t.timestamps null: false
     end

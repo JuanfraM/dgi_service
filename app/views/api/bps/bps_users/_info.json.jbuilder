@@ -7,4 +7,6 @@ json.data do
   json.sexo             user.sexo
   json.email            user.email
   json.nacionalidad     user.nacionalidad
+  json.ano_de_alta      user.ano_de_alta
+  json.afap             user.afap
 end

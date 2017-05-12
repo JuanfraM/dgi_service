@@ -10,6 +10,8 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :email
       t.string :nacionalidad
       t.string :tel
+      t.string :direccion
+      t.string :residente
 
       t.timestamps null: false
     end

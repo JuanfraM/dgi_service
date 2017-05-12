@@ -9,4 +9,6 @@ json.data do
   json.nacionalidad     user.nacionalidad
   json.email            user.email
   json.tel              user.tel
+  json.direccion        user.direccion
+  json.residente        user.residente
 end
