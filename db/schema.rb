@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422222517) do
+ActiveRecord::Schema.define(version: 20170531233655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 20170422222517) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.index ["numero_documento"], name: "index_bps_users_on_numero_documento", unique: true, using: :btree
+  end
+
+  create_table "enrich_users", force: :cascade do |t|
+    t.string   "pais"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_enrich_users_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
