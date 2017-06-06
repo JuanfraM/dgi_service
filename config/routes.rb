@@ -23,5 +23,12 @@ Rails.application.routes.draw do
         end
       end
     end
+    namespace :enrich, defaults: { format: :json } do
+      resources :users do
+        collection do
+          get 'user-info', to: :user_info
+        end
+      end
+    end
   end
 end

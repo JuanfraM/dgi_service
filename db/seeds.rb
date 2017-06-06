@@ -91,3 +91,7 @@ userBps3 = BpsUser.find_or_create_by(
 userBps1.bps_aportes.find_or_create_by(sueldo: 30000, jubilacion: 2500, fonasa: 1200)
 userBps2.bps_aportes.find_or_create_by(sueldo: 42000, jubilacion: 3500, fonasa: 3200)
 userBps3.bps_aportes.find_or_create_by(sueldo: 35000, jubilacion: 2800, fonasa: 1400)
+EnrichUser.find_or_create_by(user: user1, pais: 'Uruguay')
+EnrichUser.find_or_create_by(user: user2, pais: 'Polonia')
+EnrichUser.find_or_create_by(user: user3, pais: 'Italia')
+EnrichUser.find_or_create_by(user: user4, pais: 'Espana')
